@@ -8,26 +8,31 @@
 *****************************************************************************************************/-->
 
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-    <button onclick="changeBackgroundColor()">Randomize Color!</button>
-  </body>
-    <script>
-      // Function to generate random 6 digit hex color
-      function getRandomColor(){
-        let letters = '0123456789ABCDEF';                     // Variable to hold all hex values
-        let color = '#';                                      // Variable to hold generated hex values
-        for (let i = 0; i < 6; i++) {
-          color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;                                         // Returns a 6 digit hex color
-      }
-      // Function to call/set random background color
-      function changeBackgroundColor(){
-        let newColor = getRandomColor();                      // Variable to hold the value of random color function
-        document.body.style.backgroundColor = newColor;
-      }
-    </script>
+
+<head>
+  <title>Random Hex Color Generator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <button onclick="changeBackgroundColor()">Randomize Color!</button>
+</body>
+  
+<script>
+  // Function to generate random 6 digit hex color
+  function getRandomColor(){
+    let letters = '0123456789ABCDEF';                     // Variable to hold all hex values
+    let color = '#';                                      // Variable to hold generated hex values
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;                                         // Returns a 6 digit hex color
+  }
+  // Function to call/set random background color
+  function changeBackgroundColor(){
+    let newColor = getRandomColor();                      // Variable to hold the value of random color function
+    document.body.style.backgroundColor = newColor;
+  }
+</script>
+
 </html>
